@@ -45,7 +45,7 @@ export const config: Config = {
   show_help: true,
 
   // Versions list (optional if provided by .versions.json)
-  versions: ["24.10.3", "24.10.2", "24.10.1", "24.10.0", "23.05.4", "23.05.3", "23.05.2", "23.05.1"],
+  versions: ["24.10.3", "24.10.2", "24.10.1", "24.10.0", "23.05.6", "23.05.4", "23.05.3", "23.05.2", "23.05.1"],
 
   // Pre-selected version (optional if provided by .versions.json)
   default_version: "24.10.3",
