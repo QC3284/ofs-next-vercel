@@ -1,0 +1,70 @@
+export interface Config {
+  // Brand name
+  brand_name: string
+
+  // Homepage URL (for logo link)
+  homepage_url: string
+
+  // Show help text for images
+  show_help: boolean
+
+  // Versions list (optional if provided by .versions.json)
+  versions: string[]
+
+  // Pre-selected version (optional if provided by .versions.json)
+  default_version: string
+
+  // Image download URL (e.g. "https://downloads.openwrt.org")
+  image_url: string
+
+  // Insert snapshot versions (optional)
+  show_snapshots?: boolean
+
+  // Info link URL (optional)
+  info_url?: string
+
+  // Attended Sysupgrade Server support (optional)
+  asu_url?: string
+  asu_extra_packages?: string[]
+
+  // Enable/disable module management feature (optional)
+  enable_module_management?: boolean
+
+  // Versions that use apk v3 package index (packages.adb)
+  apk_versions?: string[]
+}
+
+export const config: Config = {
+  // Brand name
+  brand_name: "ImmortalWrt",
+
+  // Homepage URL (for logo link)
+  homepage_url: "https://immortalwrt.org/",
+
+  // Show help text for images
+  show_help: true,
+
+  // Versions list (optional if provided by .versions.json)
+  versions: ["24.10.3", "24.10.2", "24.10.1", "24.10.0", "23.05.4", "23.05.3", "23.05.2", "23.05.1"],
+
+  // Pre-selected version (optional if provided by .versions.json)
+  default_version: "24.10.3",
+
+  // Image download URL (e.g. "https://downloads.openwrt.org")
+  image_url: "https://downloads.immortalwrt.org",
+
+  // Insert snapshot versions (optional)
+  show_snapshots: true,
+
+  // Info link URL (optional)
+  info_url: "https://openwrt.org/start?do=search&id=toh&q={title} @toh",
+
+  // Attended Sysupgrade Server support (optional)
+  asu_url: "https://sysupgrade.kyarucloud.moe",
+  asu_extra_packages: ["luci"],
+
+  // Enable/disable module management feature (optional)
+  enable_module_management: false,
+  // Treat these versions as using apk v3 index
+  apk_versions: ["SNAPSHOT"]
+}
